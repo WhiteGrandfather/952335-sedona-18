@@ -1,0 +1,58 @@
+
+.page-header__wrapper-logo {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 215px;
+}
+
+.page-header__wrapper-logo--index {
+height: 445px;
+}
+
+.page-header__wrapper-logo::before {
+  content:"";
+  position: absolute;
+  top: 108px;
+  left: 50%;
+
+  width: 280px;
+  height: 38px;
+
+  background-image: url(../../img/text-sedona.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5;
+
+  transform: translate(-50%, 0%);
+}
+
+.page-header__wrapper-logo--index::before {
+height: 215px;
+
+background-image: url(../../img/text-sedona-index.svg);
+}
+
+.page-header__wrapper-logo::after {
+  content:"";
+  position: absolute;
+  top: 57px;
+
+  width: 782px;
+  height: 158px;
+
+  background-image: url(../../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+  transform: translate(-50%, 0%);
+}
+
+.page-header__wrapper-logo--index::after {
+height: 390px;
+
+background-image: url(../../img/bg-back-mobile@1x.jpg);
+background-size: contain;
+}

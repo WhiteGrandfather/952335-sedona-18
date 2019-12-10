@@ -1,0 +1,43 @@
+/*
+
+@font-small: 14px;
+@font-middle: 18px;
+@font-big: 21px;
+@height-small: 21px;
+@height-small-middle: 24px;
+@height-middle: 26px;
+@regular: 400;
+@bold: 800;
+
+*/
+
+@gray: #333333;
+@black: #000000;
+@white: #ffffff;
+@blue: #81b3d2;
+
+.font-global {
+  font-family: "PTSans", "Arial", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.font (@size, @height, @weight) {
+  font-size: @size;
+  line-height: @height;
+  font-weight: @weight;
+}

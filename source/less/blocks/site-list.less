@@ -13,8 +13,38 @@
 
   .font(18px, 40px, 800);
   text-align: center;
-  color: #ffffff;
+  color: @white;
   text-decoration: none;
 
-  background-color: #81b3d2;
+  background-color: @blue;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+  }
+
+  .site-list__item {
+    min-width: 160px;
+
+    &--left-marg {
+      margin-left: auto;
+    }
+  }
+
+  .site-list__item-link {
+    padding-top: 14px;
+    padding-bottom: 16px;
+
+    .font(14px, 26px, 800);
+    color: @black;
+
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    min-width: 250px;
+  }
 }

@@ -1,4 +1,11 @@
+.advantages-group__item {
+  width: 320px;
+  min-height: 135px;
+}
+
 .advantages-group__title {
+  margin: 0;
+
   .font(18px, 26px, 800);
   color: @black;
 }
@@ -7,3 +14,28 @@
   .font(14px, 21px, 400);
   color: @gray;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages-group {
+    display: flex;
+
+    width: @tablet-width;
+
+    text-align: center;
+
+    &__item {
+      min-height: 330px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-group {
+    width: @desktop-width;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
+

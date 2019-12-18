@@ -1,8 +1,10 @@
 .page-main__title {
-  /*
-  .font-style;
-  */
-  .font(21px, 26px, 800);
+  min-width: 280px;
+  min-height: 115px;
+  .margin-center;
+
+  .font(18px, 26px, 800);
+  text-align: center;
   color: #000000;
 }
 
@@ -13,3 +15,10 @@
 .page-main__title--photo-gallery {
   .visually-hidden;
 }
+
+@media (min-width: @tablet-width) {
+  .page-main__title {
+  .font(21px, 26px, 800);
+  }
+}
+

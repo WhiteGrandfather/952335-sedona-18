@@ -1,23 +1,94 @@
+.form {
+  width: 280px;
+  .margin-center;
+}
+
 .form__title {
+  min-width: 280px;
+  min-height: 45px;
+  .margin-center;
+
   .font(18px, 26px, 800);
+  text-align: center;
+  color: @black;
 }
 
 .form__text {
+  width: 280px;
+  min-height: 105px;
+
   .font(14px, 24px, 400);
-  color: #333333;
+  text-align: center;
+  color: @gray;
+}
+
+.form__list {
+  .list-style;
 }
 
 .form__group {
+  width: 100%;
+
   border: none;
 }
 
 .form__group-title {
+  min-height: 42px;
+
+  .margin-center;
+
   .font(18px, 26px, 800);
 }
 
+.form__item {
+  display: flex;
+  align-items: baseline;
+  box-sizing: border-box;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &--contakts {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 .form__item-label {
+  padding-right: 15px;
+
   .font(14px, 26px, 400);
-  color: #333333;
+  color: @gray;
+  text-align: center;
+
+  &--contakts {
+    width: 100%;
+  }
+
+  &--checkbox {
+    .font(18px, 26px, 800);
+    text-transform: none;
+  }
+
+  &--radio {
+    .font(18px, 26px, 800);
+    text-transform: none;
+
+  }
+}
+
+.form__item-input {
+  flex-grow: 1;
+  height: 58px;
+
+  &--contakts {
+    width: 100%;
+  }
+}
+
+.form__item-textarea {
+  width: 100%;
+  min-height: 160px;
 }
 
 .form__item-input,
@@ -25,16 +96,134 @@
   font-family: "PTSans", "Arial", sans-serif;
   text-transform: none;
   .font(18px, 26px, 800);
-  color: #000000;
+  color: @black;
 
   background-color: #f2f2f2;
   border: none;
+
+  &::placeholder {
+    font-family: "PTSans", "Arial", sans-serif;
+    text-transform: none;
+    .font(18px, 26px, 800);
+    color: @black;
+  }
 }
 
-.form__item-input::placeholder,
-.form__item-textarea::placeholder {
-  font-family: "PTSans", "Arial", sans-serif;
-  text-transform: none;
-  .font(18px, 26px, 800);
-  color: #000000;
+.form__button {
+  .button;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    position: relative;
+
+    width: @tablet-width;
+  }
+
+  .form__title {
+    min-height: 95px;
+
+    .font(30px, 26px, 800);
+  }
+
+  .form__text {
+    width: 450px;
+    min-height: 90px;
+
+    .margin-center;
+  }
+
+  .form__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .form__item-label--contakts {
+      width: auto;
+  }
+
+  .form__list-item {
+    width: 324px;
+    min-height: 310px;
+  }
+
+  .form__list-item--order {
+    order: -1;
+  }
+
+  .form__list-item--wide {
+    min-width: @tablet-width;
+  }
+
+  .form__item--attractions {
+    display: inline-block;
+    width: 324px;
+  }
+
+  .form__button::after {
+    position: absolute;
+    content: "* — обязательные поля";
+    right: 0;
+
+    width: 172px;
+    height: 24px;
+
+    .font(14px, 26px, 400);
+    text-transform: uppercase;
+    color: @gray;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 960px;
+  }
+
+  .form__item--attractions {
+    width: 200px;
+  }
+
+  .form__item--contakts {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .font(14px, 26px, 400);
+
+    width: 476px;
+  }
+
+  .form__item--phone {
+    width: 395px;
+    padding-right: 80px;
+  }
+
+
+  .form__item--phone::before {
+    content: "Телефон*:";
+
+    width: 80px;
+    height: 24px;
+    padding-right: 10px;
+  }
+
+  .form__item-input--contakts {
+    width: 200px;
+    box-sizing: border-box;
+  }
+
+  .form__item-label--hidden {
+    .visually-hidden;
+  }
+
+  .form__list-item--wide {
+    min-width: 960px;
+    min-height: 220px;
+  }
+
+  .form__group-title--attractions {
+    width: 295px;
+    text-align: center;
+  }
 }

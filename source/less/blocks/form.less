@@ -48,7 +48,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  &--contakts {
+  &--contacts {
     flex-direction: column;
     width: 100%;
   }
@@ -61,7 +61,7 @@
   color: @gray;
   text-align: center;
 
-  &--contakts {
+  &--contacts {
     width: 100%;
   }
 
@@ -80,7 +80,7 @@
   flex-grow: 1;
   height: 58px;
 
-  &--contakts {
+  &--contacts {
     width: 100%;
   }
 }
@@ -108,8 +108,8 @@
   }
 }
 
-.form__button {
-  .button;
+.form__text--small {
+  .visually-hidden;
 }
 
 @media (min-width: @tablet-width) {
@@ -138,21 +138,29 @@
     justify-content: space-around;
   }
 
-  .form__item-label--contakts {
+  .form__item-label--contacts {
     width: auto;
+  }
+
+  .form__label-text {
+    .visually-hidden;
   }
 
   .form__list-item {
     width: 324px;
     min-height: 310px;
+
+    &--order {
+      order: -1;
+    }
+
+    &--wide {
+      min-width: @tablet-width;
+    }
   }
 
-  .form__list-item--order {
-    order: -1;
-  }
-
-  .form__list-item--wide {
-    min-width: @tablet-width;
+  .form__item--contacts {
+    flex-direction: row;
   }
 
   .form__item--attractions {
@@ -160,17 +168,25 @@
     width: 324px;
   }
 
-  .form__button::after {
-    position: absolute;
-    content: "* — обязательные поля";
-    right: 0;
+  .form__button {
+    display: inline-block;
 
-    width: 172px;
-    height: 24px;
+    width: 324px;
+  }
+
+  .form__text--small {
+    display: inline-block;
+    position: unset;
+
+    width: 430px;
+    height: auto;
+    margin: 0;
 
     .font(14px, 26px, 400);
-    text-transform: uppercase;
-    color: @gray;
+    text-align: right;
+
+    clip-path: unset;
+    overflow: unset;
   }
 }
 
@@ -183,37 +199,29 @@
     width: 200px;
   }
 
-  .form__item--contakts {
+  .form__item--contacts {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: row;
 
     .font(14px, 26px, 400);
-
-    width: 476px;
   }
 
-  .form__item--phone {
-    width: 395px;
-    padding-right: 80px;
+  .form__label-text {
+    display: inline-block;
+    position: unset;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+
+    clip-path: unset;
+    overflow: unset;
   }
 
-
-  .form__item--phone::before {
-    content: "Телефон*:";
-
-    width: 80px;
-    height: 24px;
-    padding-right: 10px;
-  }
-
-  .form__item-input--contakts {
+  .form__item-input--contacts {
     width: 200px;
     box-sizing: border-box;
-  }
-
-  .form__item-label--hidden {
-    .visually-hidden;
   }
 
   .form__list-item--wide {
@@ -224,5 +232,9 @@
   .form__group-title--attractions {
     width: 295px;
     text-align: center;
+  }
+
+  .form__text--small {
+    width: 620px;
   }
 }

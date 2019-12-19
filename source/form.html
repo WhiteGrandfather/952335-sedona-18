@@ -28,17 +28,17 @@
           </ul>
         </div>
       </nav>
-      <div class="page-header__logo-burger-wrapper">
+      <div class="page-header__row">
         <a class="page-header__logo logo" href="index.html">
             <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
           </a>
-        <button class="main-nav__burger burger" type="button">
-          <svg class="burger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
-          <span class="burger__text">Открыть меню</span>
+        <button class="main-nav__menu-toggle menu-toggle" type="button">
+          <svg class="menu-toggle__icon" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
+          <span class="menu-toggle__text">Открыть меню</span>
         </button>
       </div>
-      <div class="page-header__banner banner banner">
-        <img class="banner__img banner__img" src="img/text-sedona.svg" width="229" height="39" alt="welcome to the gergeous Sedona">
+      <div class="page-header__banner banner">
+        <img class="banner__img" src="img/text-sedona.svg" width="229" height="39" alt="welcome to the gergeous Sedona">
       </div>
     </header>
     <main class="page-main">
@@ -68,13 +68,13 @@
             <li class="form__list-item form__list-item--wide">
               <fieldset class="form__group">
                 <legend class="form__group-title">Контактная информация:</legend>
-                <div class="form__item form__item--contakts form__item--phone">
-                  <label class="form__item-label form__item-label--contakts form__item-label--hidden" for="form-name">Контактный телефон*:</label>
-                  <input class="form__item-input form__item-input--contakts form__item-input--phone" type="tel" name="phone" placeholder="Введите телефон" id="form-phone">
+                <div class="form__item form__item--contacts form__item--phone">
+                  <label class="form__item-label form__item-label--contacts form__item-label--hidden" for="form-phone"><span class="form__label-text">Контактный</span> телефон*:</label>
+                  <input class="form__item-input form__item-input--contacts form__item-input--phone" type="tel" name="phone" placeholder="Введите телефон" id="form-phone">
                 </div>
                 <div class="form__item form__item--contakts">
-                  <label class="form__item-label form__item-label--contakts" for="form-last-name">Электронная почта*:</label>
-                  <input class="form__item-input form__item-input--contakts" type="email" name="email" placeholder="Введите телефон" id="form-email">
+                  <label class="form__item-label form__item-label--contakts" for="form-email">Электронная почта*:</label>
+                  <input class="form__item-input form__item-input--contakts" type="email" name="email" placeholder="Введите e-mail" id="form-email">
                 </div>
               </fieldset>
             </li>
@@ -123,7 +123,8 @@
               </fieldset>
             </li>
           </ul>
-          <button class="form__button" type="submit">Отправить отзыв</button>
+            <button class="form__button button" type="submit">Отправить отзыв</button>
+            <p class="form__text form__text--small">* — обязательные поля</p>
         </form>
       </section>
     </main>

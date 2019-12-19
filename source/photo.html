@@ -28,17 +28,17 @@
           </ul>
         </div>
       </nav>
-      <div class="page-header__logo-burger-wrapper">
+      <div class="page-header__row">
         <a class="page-header__logo logo" href="index.html">
             <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
           </a>
-        <button class="main-nav__burger burger" type="button">
-          <svg class="burger__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
-          <span class="burger__text">Открыть меню</span>
+        <button class="main-nav__menu-toggle menu-toggle" type="button">
+          <svg class="menu-toggle__icon" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
+          <span class="menu-toggle__text">Открыть меню</span>
         </button>
       </div>
-      <div class="page-header__banner banner banner">
-        <img class="banner__img banner__img" src="img/text-sedona.svg" width="229" height="39" alt="welcome to the gergeous Sedona">
+      <div class="page-header__banner banner">
+        <img class="banner__img " src="img/text-sedona.svg" width="229" height="39" alt="welcome to the gergeous Sedona">
       </div>
     </header>
     <main class="page-main">
@@ -51,44 +51,51 @@
             <a class="card__image-link card__image-link--1 card__image-link--wide" href="">
               <img class="card__image card__image--wide" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
             </a>
-            <h3 class="card__title card__title--wide">Неродные просторы</h3>
-            <p class="card__text card__text--wide">Автор фото: Борис</p>
-            <p class="card__likes card__likes--wide">1350</p>
+            <div class="card__text-wrapper">
+              <h3 class="card__title card__title--wide">Неродные просторы</h3>
+              <p class="card__text card__text--wide">Автор фото: Борис</p>
+              <p class="card__likes card__likes--wide">1350</p>
+            </div>
           </li>
           <li class="gallery__card card">
             <a class="card__image-link card__image-link--2" href="">
               <img class="card__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
             </a>
-            <h3 class="card__title">Местная растительность</h3>
-            <p class="card__text">Автор фото: Сергей</p>
-            <p class="card__likes">143</p>
+            <div class="card__text-wrapper">
+              <h3 class="card__title">Местная растительность</h3>
+              <p class="card__text">Автор фото: Сергей</p>
+              <p class="card__likes">143</p>
+            </div>
           </li>
           <li class="gallery__card card">
             <a class="card__image-link card__image-link--3" href="">
               <img class="card__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
             </a>
-            <h3 class="card__title">Дорога на север</h3>
-            <p class="card__text">Автор фото: Петр</p>
-            <p class="card__likes">96</p>
+            <div class="card__text-wrapper">
+              <h3 class="card__title">Дорога на север</h3>
+              <p class="card__text">Автор фото: Петр</p>
+              <p class="card__likes">96</p>
+            </div>
           </li>
           <li class="gallery__card card">
             <a class="card__image-link card__image-link--4" href="">
               <img class="card__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
             </a>
-            <h3 class="card__title">Мост дьявола</h3>
-            <p class="card__text">Автор фото: Антон</p>
-            <p class="card__likes">254</p>
+            <div class="card__text-wrapper">
+              <h3 class="card__title">Мост дьявола</h3>
+              <p class="card__text">Автор фото: Антон</p>
+              <p class="card__likes">254</p>
+            </div>
           </li>
         </ul>
         <div class="gallery__video">
           <h2 class="gallery__video-title">Все еще сомневаетесь?</h2>
           <p class="gallery__video-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <div class="gallery__player player">
-            <div class="player__content"></div>
-            <div class="player__scale">
-              <button class="player__slider" type="button" aria-label="Ползунок видео"></button>
-            </div>
             <div class="player__controls">
+              <div class="player__scale">
+                <button class="player__slider" type="button" aria-label="Ползунок видео"></button>
+              </div>
               <button class="player__control player__control--replay" type="button" aria-label="Воспроизвести сначала"></button>
               <button class="player__control player__control--subtitles" type="button" aria-label="Субтитры"></button>
               <button class="player__control player__control--fullscreen" type="button" aria-label="На весь экран"></button>

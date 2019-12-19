@@ -11,7 +11,14 @@
 }
 
 .order__button {
-  .button;
+  display: block;
+  .margin-center;
+}
+
+.order__map {
+  display: block;
+
+  .margin-center;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,20 +28,18 @@
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
+  }
 
-    &__map {
-      .visually-hidden;
-    }
+  .order__map {
+    .visually-hidden;
+  }
 
-    &__title {
-      .font(30px, 26px, 800);
-    }
+  .order__title {
+    .font(30px, 26px, 800);
+  }
 
-    &__button {
-      max-width: 460px;
-      min-height: 55px;
-      .margin-center;
-    }
+  .order__button {
+    width: 460px;
   }
 }
 

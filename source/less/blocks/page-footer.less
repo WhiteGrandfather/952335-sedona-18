@@ -42,12 +42,12 @@
 
     min-width: @tablet-width;
     min-height: 120px;
+  }
 
-    &__item {
-      min-width: 140px;
-    }
+  .page-footer__item {
+    min-width: 140px;
 
-    &__item--creators-link {
+    &--creators-link {
       margin: 0;
     }
   }
@@ -55,10 +55,11 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
+    min-width: 960px;
     max-width: 1200px;
+  }
 
-    &__item--social {
-      .margin-center;
-    }
+  .page-footer__item--social {
+    .margin-center;
   }
 }

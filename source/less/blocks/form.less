@@ -78,7 +78,7 @@
 
 .form__item-input {
   flex-grow: 1;
-  height: 58px;
+  min-height: 58px;
 
   &--contacts {
     width: 100%;
@@ -108,8 +108,13 @@
   }
 }
 
+.form__button {
+  width: 280px;
+}
+
 .form__text--small {
-  .visually-hidden;
+  display: none;
+  min-height: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -127,7 +132,6 @@
 
   .form__text {
     width: 450px;
-    min-height: 90px;
 
     .margin-center;
   }
@@ -143,7 +147,7 @@
   }
 
   .form__label-text {
-    .visually-hidden;
+    display: none;
   }
 
   .form__list-item {
@@ -164,29 +168,27 @@
   }
 
   .form__item--attractions {
-    display: inline-block;
     width: 324px;
   }
 
+  .form__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .form__button {
-    display: inline-block;
+    display: block;
 
     width: 324px;
   }
 
   .form__text--small {
-    display: inline-block;
-    position: unset;
+    display: block;
 
     width: 430px;
-    height: auto;
-    margin: 0;
 
     .font(14px, 26px, 400);
     text-align: right;
-
-    clip-path: unset;
-    overflow: unset;
   }
 }
 
@@ -208,15 +210,7 @@
   }
 
   .form__label-text {
-    display: inline-block;
-    position: unset;
-
-    width: auto;
-    height: auto;
-    margin: 0;
-
-    clip-path: unset;
-    overflow: unset;
+    display: block;
   }
 
   .form__item-input--contacts {

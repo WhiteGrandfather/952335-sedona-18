@@ -43,7 +43,6 @@
 .form__item {
   display: flex;
   align-items: baseline;
-  box-sizing: border-box;
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -78,7 +77,12 @@
 
 .form__item-input {
   flex-grow: 1;
-  min-height: 58px;
+
+  padding-top: 15px;
+  padding-left: 23px;
+  padding-bottom: 15px;
+
+  box-sizing: border-box;
 
   &--contacts {
     width: 100%;
@@ -88,6 +92,11 @@
 .form__item-textarea {
   width: 100%;
   min-height: 160px;
+  padding-top: 15px;
+  padding-left: 22px;
+  padding-bottom: 15px;
+
+  box-sizing: border-box;
 }
 
 .form__item-input,
@@ -125,8 +134,6 @@
   }
 
   .form__title {
-    min-height: 95px;
-
     .font(30px, 26px, 800);
   }
 

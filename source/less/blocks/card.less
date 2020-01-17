@@ -5,6 +5,97 @@
 
 .card__text {
   .font(14px, 21px, 400);
-  color: #333333;
+  color: @gray;
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    width: 324px;
+
+    &--wide {
+      width: 648px;
+    }
+  }
+
+  .card__image-link {
+    display: block;
+    width: 324px;
+
+    &--wide {
+      width: 648px;
+    }
+  }
+
+  .card__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background-color: #f2f2f2;
+  }
+
+  .card__title {
+    min-width: 324px;
+
+    &--wide {
+      min-width: 648px;
+    }
+  }
+
+  .card__text {
+    min-width: 220px;
+  }
+
+  .card__likes {
+    min-height: 40px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    position: relative;
+    width: 400px;
+
+    &--wide {
+      width: @desktop-width;
+      min-height: 400px;
+    }
+  }
+
+  .card__image-link {
+    width: 400px;
+
+    &--wide {
+      width: 100%;
+    }
+  }
+
+  .card__text-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    color: @white;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .card__text {
+    color: inherit;
+  }
+
+  .card__title {
+    min-width: 400px;
+    margin-bottom: 0;
+
+    &--wide {
+      min-width: @desktop-width;
+    }
+  }
 }

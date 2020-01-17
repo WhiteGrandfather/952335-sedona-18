@@ -1,4 +1,12 @@
+.advantages-group__item {
+  width: 320px;
+  min-height: 135px;
+  .margin-center;
+}
+
 .advantages-group__title {
+  margin: 0;
+
   .font(18px, 26px, 800);
   color: @black;
 }
@@ -6,4 +14,17 @@
 .advantages-group__text {
   .font(14px, 21px, 400);
   color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-group {
+    display: flex;
+
+    text-align: center;
+  }
+
+  .advantages-group__item {
+    width: 100%;
+    min-height: 330px;
+  }
 }

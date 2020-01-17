@@ -1,24 +1,25 @@
+.advantages {
+  .margin-center;
+}
+
 .advantages__group {
   background-color: @white;
 }
 
-.advantages__text {
-  .font(14px, 24px, 400);
-}
-
 .advantages__list,
 .advantages__group {
-  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
+  .margin-center;
 
   list-style: none;
 }
 
-.advantages__item {
-  background-color: #eeeeee;
-}
-
-.advantages__item--1,
-.advantages__item--2 {
-  background-color: @blue;
+.advantages__text {
+  min-height: 80px;
+  .font(14px, 24px, 400);
+  text-align: center;
+  color: @gray;
 }

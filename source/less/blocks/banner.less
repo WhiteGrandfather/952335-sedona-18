@@ -1,13 +1,18 @@
 .banner {
-  height: 216px;
+  height: 158px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position-y: -228px;
   background-position-x: center;
+  background-clip: padding-box;
   z-index: -1;
 
   &--index {
-    height: 390px;
+    height: 350px;
+    padding-top: 40px;
+
+    background-position-y: 0;
   }
 }
 
@@ -21,8 +26,28 @@
   }
 }
 
+@media (max-width: @mobile-width) {
+  .banner {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: 0;
+
+      border-top: 28px solid transparent;
+      border-left: 160px solid @white;
+      border-right: 160px solid @white;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .banner {
+    position: relative;
+
     height: 290px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
@@ -30,13 +55,56 @@
     &--index {
       height: 518px;
     }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 481px;
+      left: 50%;
+
+      border-top: 40px solid transparent;
+      border-left: 384px solid @white;
+      border-right: 384px solid @white;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 461px;
+      left: 50%;
+
+      border-top: 57px solid transparent;
+      border-left: 351px solid @white;
+      border-right: 351px solid @white;
+      transform: translateX(-50%);
+    }
+
+    &--photo::before,
+    &--form::before {
+      top: 253px;
+    }
+
+    &--photo::after,
+    &--form::after {
+      top: 233px;
+    }
   }
+
 
   .banner__img {
     padding-top: 95px;
 
     &--index {
-      padding-top: 78px;
+      padding-top: 12px;
+      width: 460px;
+      height: 400px;
+    }
+
+    &--photo,
+    &--form {
+      height: 79px;
+      width: 500px;
     }
   }
 }
@@ -50,13 +118,37 @@
     &--index {
       height: 518px;
     }
+
+    &::before {
+      top: 461px;
+
+      border-top: 57px solid transparent;
+      border-left: 600px solid @white;
+      border-right: 600px solid @white;
+    }
+
+    &--photo,
+    &--form {
+      height: 305px;
+      background-position-y: -217px;
+    }
+
+    &--photo::before,
+    &--form::before {
+      top: 244px;
+    }
+
+    &--photo::after,
+    &--form::after {
+      top: 244px;
+    }
   }
 
   .banner__img {
     padding-top: 104px;
 
     &--index {
-      padding-top: 78px;
+      padding-top: 13px;
     }
   }
 }

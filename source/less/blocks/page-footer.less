@@ -1,65 +1,113 @@
 .page-footer {
-  width: 320px;
-  min-height: 245px;
   .margin-center;
+  padding-top: 43px;
+  padding-bottom: 12px;
+
+  &--form {
+    padding-top: 41px;
+  }
+}
+
+.page-footer-index {
+  padding-top: 4px;
+}
+
+.page-footer__item {
+  min-width: 138px;
+  .margin-center;
+  padding: 11px 0;
+
+
+  text-align: left;
 }
 
 .page-footer__item--hashtag {
   .font(21px, 26px, 800);
-  text-align: center;
+}
+
+.page-footer__item--social {
+  width: 160px;
 }
 
 .page-footer__item--creators-link {
   position: relative;
 
   display: block;
-  width: 140px;
-  min-height: 50px;
   .margin-center;
+  padding-top: 26px;
+  padding-left: 5px;
 
   .font(14px, 26px, 400);
   text-decoration: none;
-  color: #000000;
+  color: @black;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    right: 0;
+.page-footer__htmlacademy-logo {
+  position: absolute;
+  content: "";
+  top: 19px;
+  right: 0;
 
-    width: 27px;
-    height: 34px;
+  width: 42px;
+  height: 42px;
 
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
+  fill: @black;
+
+  &:hover {
+    fill: @blue;
+  }
+
+  &:active {
+    fill: rgba(0, 0, 0, 0.3);
   }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
 
-    min-width: @tablet-width;
-    min-height: 120px;
-  }
+    padding-top: 14px;
 
-  .page-footer__item {
-    min-width: 140px;
+    &--photo {
+      padding-top: 54px;
+    }
 
-    &--creators-link {
-      margin: 0;
+    &--form {
+      padding-top: 77px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    min-width: 960px;
-    max-width: 1200px;
+    &--photo {
+      padding-top: 101px;
+    }
+
+    &--form {
+      justify-content: space-between;
+      width: 80%;
+      padding-top: 89px;
+    }
+  }
+
+  .page-footer__item {
+    margin: 0;
   }
 
   .page-footer__item--social {
-    .margin-center;
+    width: 22%;
+  }
+
+  .page-footer__item--creators-link {
+    min-width: 130px;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+
+  .page-footer__htmlacademy-logo {
+    right: -7px;
   }
 }

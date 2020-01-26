@@ -1,34 +1,74 @@
 .order__title {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
   .font(21px, 26px, 800);
   text-align: center;
-  color: #000000;
+  color: @black;
 }
 
 .order__text {
+  width: 84%;
+  .margin-center;
+  padding-bottom: 21px;
+
   .font(14px, 24px, 400);
   text-align: center;
-  color: #333333;
+  color: @gray;
 }
 
 .order__button {
   display: block;
+
+  width: 88%;
   .margin-center;
 }
 
 .order__map {
-  display: block;
+  position: relative;
 
+  display: block;
   .margin-center;
+  padding-top: 49px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+
+    display: block;
+    height: 27px;
+    width: 27px;
+
+    background-image: url("../img/icon-map-marker.svg");
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .order {
-    min-width: 768px;
-    min-height: 580px;
+    min-height: 622px;
+    padding-top: 30px;
 
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
+  }
+
+  .order__text {
+    width: 60%;
+    padding-top: 11px;
+    padding-bottom: 28px;
+
+    &--top {
+      display: block;
+
+      width: auto;
+      padding: 0;
+    }
   }
 
   .order__map {
@@ -46,6 +86,12 @@
 
 @media (min-width: @desktop-width) {
   .order {
+    min-height: 635px;
+
     background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
+
+  .order__text:not(.order__text--top) {
+    padding-bottom: 33px;
   }
 }

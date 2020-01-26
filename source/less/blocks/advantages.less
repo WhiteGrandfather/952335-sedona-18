@@ -18,8 +18,18 @@
 }
 
 .advantages__text {
-  min-height: 80px;
+  width: 81.25%;
+  .margin-center;
+  padding-top: 16px;
+  padding-bottom: 14px;
+
   .font(14px, 24px, 400);
   text-align: center;
   color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__text {
+    line-height: 26px;
+  }
 }

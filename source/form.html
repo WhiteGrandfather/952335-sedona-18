@@ -32,7 +32,11 @@
         </nav>
         <div class="page-header__row">
           <a class="page-header__logo logo" href="index.html">
-            <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona" >
+            </picture>
           </a>
           <button class="page-header__menu-toggle menu-toggle" type="button">
             <svg class="menu-toggle__icon" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>

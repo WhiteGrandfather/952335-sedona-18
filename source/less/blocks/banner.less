@@ -8,6 +8,10 @@
   background-clip: padding-box;
   z-index: -1;
 
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   &--index {
     height: 350px;
     padding-top: 40px;
@@ -29,6 +33,12 @@
 @media (max-width: @mobile-width) {
   .banner {
     position: relative;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
 
     &::after {
       position: absolute;
@@ -52,17 +62,21 @@
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
 
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+
     &--index {
-      height: 518px;
+      height: 478px;
     }
 
     &::before {
       position: absolute;
       content: "";
-      top: 481px;
+      bottom: 0;
       left: 50%;
 
-      border-top: 40px solid transparent;
+      border-top: 37px solid transparent;
       border-left: 384px solid @white;
       border-right: 384px solid @white;
       transform: translateX(-50%);
@@ -71,23 +85,13 @@
     &::after {
       position: absolute;
       content: "";
-      top: 461px;
+      bottom: 0;
       left: 50%;
 
       border-top: 57px solid transparent;
       border-left: 351px solid @white;
       border-right: 351px solid @white;
       transform: translateX(-50%);
-    }
-
-    &--photo::before,
-    &--form::before {
-      top: 253px;
-    }
-
-    &--photo::after,
-    &--form::after {
-      top: 233px;
     }
   }
 
@@ -115,13 +119,15 @@
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
 
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+
     &--index {
-      height: 518px;
+      height: 478px;
     }
 
     &::before {
-      top: 461px;
-
       border-top: 57px solid transparent;
       border-left: 600px solid @white;
       border-right: 600px solid @white;

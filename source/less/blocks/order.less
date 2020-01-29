@@ -50,12 +50,7 @@
 
 @media (min-width: @tablet-width) {
   .order {
-    min-height: 622px;
     padding-top: 30px;
-
-    background-image: url("../img/bg-map-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
   }
 
   .order__text {
@@ -71,8 +66,17 @@
     }
   }
 
+  .order__map-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .order__map {
-    .visually-hidden;
+    width: auto;
+    max-width: 100%;
+    padding-top: 60px;
+
+    box-sizing: content-box;
   }
 
   .order__title {
@@ -87,11 +91,13 @@
 @media (min-width: @desktop-width) {
   .order {
     min-height: 635px;
-
-    background-image: url("../img/bg-map-desktop@1x.jpg");
   }
 
   .order__text:not(.order__text--top) {
     padding-bottom: 33px;
+  }
+
+  .order__map {
+    padding-top: 68px;
   }
 }

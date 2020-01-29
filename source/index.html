@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -31,8 +32,12 @@
         </nav>
         <div class="page-header__row">
           <a class="page-header__logo logo" href="index.html">
-              <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona">
-            </a>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona" >
+            </picture>
+          </a>
           <button class="page-header__menu-toggle menu-toggle" type="button">
             <svg class="menu-toggle__icon menu-toggle__icon--burger" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
             <svg class="menu-toggle__icon menu-toggle__icon--cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.199" height="22.199" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199"><path d="M22.199 2.804 19.396.0 11.1 8.297 2.804.0.0 2.803 8.297 11.1.0 19.396 2.803 22.199 11.1 13.902 19.396 22.199 22.199 19.396 13.903 11.1z"/></svg>
@@ -44,7 +49,7 @@
         </div>
       </header>
       <main class="page-main">
-        <h1 class="page-main__title"><span>Седона — небольшой городок в Аризоне,</span><br> заслуживающий большего!</h1>
+        <h1 class="page-main__title page-main__title--index"><span>Седона — небольшой городок в Аризоне,</span><br> заслуживающий большего!</h1>
         <section class="advantages">
           <h2 class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
           <ul class="advantages__list advantages-list">
@@ -55,7 +60,11 @@
                   <p class="advantages-list__text advantages-list__text--white advantages-list__text--number">— №1 —</p>
                   <p class="advantages-list__text advantages-list__text--bottom advantages-list__text--white advantages-list__text--background-image-1">Седона не аттракцион для туристов, там течет своя жизнь</p>
                 </div>
-                <div class="advantages-list__image advantages-list__image--1"></div>
+                <picture class="advantages-list__image-container">
+                  <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
+                  <img class="advantages-list__image advantages-list__image--1" src="img/main-city-mobile@1x.jpg" width="320" height="260" srcset="img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
+                </picture>
               </div>
               <ul class="advantages__group advantages-group">
                 <li class="advantages-group__item">
@@ -82,7 +91,11 @@
                   <p class="advantages-list__text advantages-list__text--white advantages-list__text--number">— №2 —</p>
                   <p class="advantages-list__text advantages-list__text--bottom advantages-list__text--small advantages-list__text--white advantages-list__text--background-image-2">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 </div>
-                <div class="advantages-list__image advantages-list__image--2"></div>
+                <picture class="advantages-list__image-container">
+                  <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg 2x">
+                  <img class="advantages-list__image advantages-list__image--1" src="img/main-bridge-mobile@1x" width="320" height="260" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Настоящий городок">
+                </picture>
               </div>
             </li>
             <li class="advantages-list__item advantages-list__item--3 advantages-list__item--gray advantages-list__item--small">
@@ -106,7 +119,11 @@
           <h2 class="order__title">Заинтересовались?</h2>
           <p class="order__text"><span class="order__text order__text--top">Укажите предполагаемые даты поездки,</span> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="order__button button" href="" >Найти гостиницу</a>
-          <img class="order__map" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Расположение гостиниц">
+          <picture class="order__map-container">
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg, img/bg-map-tablet@2x.jpg 2x">
+            <img class="order__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Расположение гостиниц">
+          </picture>
         </section>
       </main>
       <footer class="page-footer page-footer--index">
